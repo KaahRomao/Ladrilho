@@ -170,6 +170,9 @@
   }
 }
 @layer utilities {
+  .invisible {
+    visibility: hidden;
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
@@ -184,6 +187,9 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
@@ -303,6 +309,18 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
+  .\*\:mt-10 {
+    :is(& > *) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  .hover\:visible {
+    &:hover {
+      @media (hover: hover) {
+        visibility: visible;
+      }
+    }
+  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -348,8 +366,44 @@
       }
     }
   }
+  .sm\:size-8 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 8);
+      height: calc(var(--spacing) * 8);
+    }
+  }
   .sm\:size-10 {
     @media (width >= 40rem) {
+      width: calc(var(--spacing) * 10);
+      height: calc(var(--spacing) * 10);
+    }
+  }
+  .sm\:size-12 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 12);
+      height: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:size-16 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 16);
+      height: calc(var(--spacing) * 16);
+    }
+  }
+  .sm\:size-17 {
+    @media (width >= 40rem) {
+      width: calc(var(--spacing) * 17);
+      height: calc(var(--spacing) * 17);
+    }
+  }
+  .md\:size-6 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 6);
+      height: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:size-10 {
+    @media (width >= 48rem) {
       width: calc(var(--spacing) * 10);
       height: calc(var(--spacing) * 10);
     }
@@ -360,15 +414,67 @@
       height: calc(var(--spacing) * 12);
     }
   }
+  .md\:size-14 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 14);
+      height: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:size-16 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 16);
+      height: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:size-18 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 18);
+      height: calc(var(--spacing) * 18);
+    }
+  }
+  .md\:size-20 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 20);
+      height: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:columns-2 {
+    @media (width >= 48rem) {
+      columns: 2;
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:size-12 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 12);
+      height: calc(var(--spacing) * 12);
     }
   }
   .lg\:size-16 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 16);
       height: calc(var(--spacing) * 16);
+    }
+  }
+  .lg\:size-18 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 18);
+      height: calc(var(--spacing) * 18);
+    }
+  }
+  .lg\:size-20 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 20);
+      height: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:columns-3 {
+    @media (width >= 64rem) {
+      columns: 3;
     }
   }
   .lg\:grid-cols-3 {
