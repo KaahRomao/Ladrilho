@@ -48,12 +48,18 @@ function inserirIMG(url, autor) {
   let img = document.createElement("img");
   img.src = url;
   img.className =
-    "w-full h-70 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 object-cover blur-sm hover:blur-none";
+    "w-full h-70 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 object-cover blur-sm hover:blur-none grayscale-90 hover:grayscale-0";
   figure.appendChild(img);
 
   let figcaption = document.createElement("figcaption");
   figcaption.innerText = autor;
-  figcaption.classList.add("text-center", "text-sm", "mt-2", "text-gray-500");
+  figcaption.classList.add(
+    "text-center",
+    "text-sm",
+    "mt-2",
+    "text-gray-500",
+    "font-bold",
+  );
   figure.appendChild(figcaption);
 
   main.appendChild(figure);
